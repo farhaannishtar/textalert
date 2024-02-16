@@ -1,4 +1,4 @@
-# Thanks for purchasing Boilerbay!
+# Text Alert
 
 ## Getting Started
 
