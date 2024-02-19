@@ -1,3 +1,4 @@
+
 import Sidebar from "@/src/components/layout/Sidebar";
 
 const LandingLayout = async ({ children }: { children: React.ReactNode }) => {
