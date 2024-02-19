@@ -1,6 +1,6 @@
 "use client";
 
-import Title from "@/src/components/common/Title";
+// import Title from "@/src/components/common/Title";
 import Gradient from "@/src/components/common/gradient";
 import { Button } from "@/src/components/ui/button";
 import { Input } from "@/src/components/ui/input";
