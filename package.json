@@ -28,6 +28,8 @@
 		"@radix-ui/react-tabs": "^1.0.4",
 		"@react-email/components": "^0.0.7",
 		"@stripe/stripe-js": "^2.1.7",
+		"@stytch/nextjs": "^17.0.1",
+		"@stytch/vanilla-js": "^4.5.3",
 		"@tremor/react": "^3.10.1",
 		"@uploadthing/react": "^6.1.0",
 		"axios": "^1.5.1",
