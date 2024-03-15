@@ -4,7 +4,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import { ThemeProvider } from "../components/theme-provider";
-import { Session } from "../providers/SessionProvider";
 import { siteConfig } from "../config/site";
 import dynamic from "next/dynamic";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
