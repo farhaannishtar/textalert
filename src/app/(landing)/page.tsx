@@ -18,15 +18,13 @@ const Home = async () => {
 		<>
 			{/* <Header user={user} /> */}
 			<div className="lg:max-w-7xl md:max-w-5xl w-[95%] mx-auto flex flex-col items-center gap-20 md:gap-36">
-				<h1 className="text-2xl">this is the `/` route</h1>
-				<Link href="/login">Login</Link>
-				<LogoCloud />
+				{/* <LogoCloud />
 				<Overviews />
-				<Features />
+				<Features /> */}
 				{/* <Pricing user={user} userSubscription={userSubscription} /> */}
-				<Testimonials />
+				{/* <Testimonials />
 				<Faq />
-				<Footer />
+				<Footer /> */}
 			</div>
 		</>
 	);

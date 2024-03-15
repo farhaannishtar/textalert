@@ -81,8 +81,8 @@ export default function RootLayout({
 	const CrispWithNoSSR = dynamic(() => import("../config/crisp"));
 	return (
 		<html lang="en">
-			<CrispWithNoSSR />
-			<PHProvider>
+			{/* <CrispWithNoSSR /> */}
+			{/* <PHProvider> */}
 			<StytchProvider stytch={stytch}>
 				<body className={font.className}>
 					{/* <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} /> */}
@@ -98,7 +98,7 @@ export default function RootLayout({
 					{/* </Session> */}
 				</body>
 			</StytchProvider>
-			</PHProvider>
+			{/* </PHProvider> */}
 		</html>
 	);
 }
