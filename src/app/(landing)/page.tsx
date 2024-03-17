@@ -17,7 +17,12 @@ const Home = async () => {
 	return (
 		<>
 			{/* <Header user={user} /> */}
-			<div className="lg:max-w-7xl md:max-w-5xl w-[95%] mx-auto flex flex-col items-center gap-20 md:gap-36">
+			<div className="lg:max-w-7xl md:max-w-5xl w-[95%] mx-auto flex flex-col items-center gap-2 md:gap-2">
+				<h1 className="text-4xl font-bold text-black text-left py-5">Enter details to recieve text notifications for upcoming events in your google calendar</h1>
+				<div className="p-4 flex flex-col gap-4">
+					<input type="email" placeholder="Enter your email" className="p-2 border rounded text-white" />
+					<input type="number" placeholder="Enter a number" className="p-2 border rounded text-white" />
+				</div>
 				{/* <LogoCloud />
 				<Overviews />
 				<Features /> */}
