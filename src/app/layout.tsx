@@ -7,9 +7,6 @@ import { ThemeProvider } from "../components/theme-provider";
 import { siteConfig } from "../config/site";
 import dynamic from "next/dynamic";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
-import { extractRouterConfig } from "uploadthing/server";
-// import { ourFileRouter } from "./api/uploadthing/core";
-import { PHProvider } from "../providers/PosthogProvider";
 import {
 	ClerkProvider,
 } from '@clerk/nextjs'

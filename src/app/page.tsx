@@ -1,8 +1,4 @@
-// import { getCurrentUser } from "@/src/lib/session";
-import { getUserSubscription } from "@/src/lib/subscription";
-import Link from "next/link";
 import {
-  SignInButton,
   SignedIn,
   SignedOut,
   UserButton,
@@ -10,8 +6,6 @@ import {
 } from '@clerk/nextjs'
 
 const Home = async () => {
-  // const user = await getCurrentUser();
-  // const userSubscription = user ? await getUserSubscription(user?.id!) : null;
 
   return (
     <>
