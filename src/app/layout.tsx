@@ -4,7 +4,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from "../components/theme-provider";
-import { siteConfig } from "../config/site";
 import dynamic from "next/dynamic";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import {
@@ -65,15 +64,14 @@ import {
 // };
 
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
+	subsets: ['latin'],
+	display: 'swap',
 })
 export default function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
-	const CrispWithNoSSR = dynamic(() => import("../config/crisp"));
 	return (
 		<ClerkProvider>
 			<html lang="en" className={inter.className}>
