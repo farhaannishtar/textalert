@@ -2,7 +2,7 @@
 
 import "./globals.css";
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Inter } from 'next/font/google'
 import { ThemeProvider } from "../components/theme-provider";
 import { siteConfig } from "../config/site";
 import dynamic from "next/dynamic";
@@ -10,10 +10,10 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 // import { ourFileRouter } from "./api/uploadthing/core";
 import { PHProvider } from "../providers/PosthogProvider";
-import { StytchProvider } from '@stytch/nextjs';
-import { createStytchUIClient } from '@stytch/nextjs/ui';
+import {
+	ClerkProvider,
+} from '@clerk/nextjs'
 
-const stytch = createStytchUIClient(process.env.NEXT_PUBLIC_STYTCH_PUBLIC_TOKEN || '');
 
 // export const metadata: Metadata = {
 // 	title: {
@@ -67,11 +67,10 @@ const stytch = createStytchUIClient(process.env.NEXT_PUBLIC_STYTCH_PUBLIC_TOKEN 
 // 	manifest: `${siteConfig.url}/site.webmanifest`,
 // };
 
-const font = Bricolage_Grotesque({
-	subsets: ["latin"],
-	weight: ["200", "300", "400", "500", "600", "700", "800"],
-});
-
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 export default function RootLayout({
 	children,
 }: {
@@ -79,25 +78,25 @@ export default function RootLayout({
 }) {
 	const CrispWithNoSSR = dynamic(() => import("../config/crisp"));
 	return (
-		<html lang="en">
-			{/* <CrispWithNoSSR /> */}
-			{/* <PHProvider> */}
-			<StytchProvider stytch={stytch}>
-				<body className={font.className}>
+		<ClerkProvider>
+			<html lang="en" className={inter.className}>
+				{/* <CrispWithNoSSR /> */}
+				{/* <PHProvider> */}
+				<body>
 					{/* <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} /> */}
 					{/* <Session> */}
-						<ThemeProvider
-							attribute="class"
-							defaultTheme="system"
-							enableSystem
-							disableTransitionOnChange
-						>
-							{children}
-						</ThemeProvider>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						{children}
+					</ThemeProvider>
 					{/* </Session> */}
 				</body>
-			</StytchProvider>
-			{/* </PHProvider> */}
-		</html>
+				{/* </PHProvider> */}
+			</html>
+		</ClerkProvider>
 	);
 }
