@@ -2,9 +2,9 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
-  RedirectToSignIn
-} from '@clerk/nextjs'
-import DisplayRequestingUserID from '../components/DisplayRequestingUserID'
+  RedirectToSignIn,
+} from "@clerk/nextjs";
+import DisplayRequestingUserID from "../components/DisplayRequestingUserID";
 
 const Home = async () => {
 
@@ -18,11 +18,17 @@ const Home = async () => {
           <div className="w-full mt-2">
             <UserButton />
           </div>
-          <h1 className="text-4xl max-w-4xl font-bold text-black text-center py-5">Subscribe to recieve SMS notifications for upcoming events in your google calendar from us by</h1>
-          <h3>Click the Profile Icon {'>'} Manage Account {'>'} Profile {'>'} Connect Account</h3>
+          <h1 className="text-4xl max-w-4xl font-bold text-black text-center py-5">
+            Subscribe to recieve SMS notifications for upcoming events in your
+            google calendar from us by
+          </h1>
+          <h3>
+            Click the Profile Icon {">"} Manage Account {">"} Profile {">"}{" "}
+            Connect Account
+          </h3>
           <DisplayRequestingUserID />
         </SignedIn>
-      </div >
+      </div>
     </>
   );
 };
